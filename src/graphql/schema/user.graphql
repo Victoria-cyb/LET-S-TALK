@@ -1,0 +1,17 @@
+type User {
+  id: ID!
+  email: String!
+  name: String!
+  posts: [Post!]
+  comments: [Comment!]
+  createdAt: String!
+}
+
+type Query {
+  me: User
+}
+
+type Mutation {
+  signup(email: String!, password: String!, name: String!): String!
+  login(email: String!, password: String!): String!
+}
